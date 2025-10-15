@@ -24,7 +24,7 @@
 
 项目已配置 Supabase 连接：
 - **URL**: `https://plvjtbzwbxmajnkanhbe.supabase.co`
-- **表名**: `students`
+- **表名**: `学生表`
 
 ## 使用方法
 
@@ -36,14 +36,14 @@
 
 如果您需要测试数据，可以：
 
-1. 在 Supabase 控制台中手动创建 `students` 表
+1. 在 Supabase 控制台中手动创建 `学生表` 表
 2. 插入测试数据
 3. 或者使用提供的测试脚本
 
 ### 创建表的 SQL
 
 ```sql
-CREATE TABLE students (
+CREATE TABLE "学生表" (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   sex VARCHAR(10) NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE students (
 ### 插入测试数据的 SQL
 
 ```sql
-INSERT INTO students (name, sex, age) VALUES
+INSERT INTO "学生表" (name, sex, age) VALUES
 ('张三', '男', 20),
 ('李四', '女', 19),
 ('王五', '男', 21),
@@ -101,7 +101,7 @@ src/
 
 1. **数据加载失败**
    - 检查 Supabase 连接配置
-   - 确认 `students` 表存在
+   - 确认 `学生表` 表存在
    - 检查 RLS 策略设置
 
 2. **页面显示空白**

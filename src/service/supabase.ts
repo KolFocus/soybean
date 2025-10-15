@@ -17,7 +17,7 @@ export interface Student {
 export async function getStudents(): Promise<Student[]> {
   try {
     const { data, error } = await supabase
-      .from('students')
+      .from('学生表')
       .select('*')
       .order('id', { ascending: true });
 

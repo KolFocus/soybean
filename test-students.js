@@ -16,7 +16,7 @@ const testStudents = [
 async function insertTestStudents() {
   try {
     const { data, error } = await supabase
-      .from('students')
+      .from('学生表')
       .insert(testStudents);
 
     if (error) {
