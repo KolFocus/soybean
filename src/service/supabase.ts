@@ -17,7 +17,7 @@ export interface Student {
 // 获取学生列表
 export async function getStudents(): Promise<Student[]> {
   try {
-    console.log('开始查询学生数据...');
+    console.log('开始查询学生数据...111');
     console.log('Supabase URL:', supabaseUrl);
     
     const { data, error } = await supabase
