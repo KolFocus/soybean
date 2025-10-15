@@ -21,7 +21,7 @@ export async function getStudents(): Promise<Student[]> {
     console.log('Supabase URL:', supabaseUrl);
     
     const { data, error } = await supabase
-      .from('student')
+      .from('student01')
       .select('*')
       .order('id', { ascending: true });
 
