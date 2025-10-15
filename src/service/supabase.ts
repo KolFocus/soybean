@@ -11,21 +11,28 @@ export interface Student {
   name: string;
   sex: string;
   age: number;
+  create_time?: string;
 }
 
 // 获取学生列表
 export async function getStudents(): Promise<Student[]> {
   try {
+    console.log('开始查询学生数据...');
+    console.log('Supabase URL:', supabaseUrl);
+    
     const { data, error } = await supabase
       .from('student')
       .select('*')
       .order('id', { ascending: true });
+
+    console.log('查询结果:', { data, error });
 
     if (error) {
       console.error('获取学生数据失败:', error);
       throw error;
     }
 
+    console.log('返回数据:', data);
     return data || [];
   } catch (error) {
     console.error('获取学生数据异常:', error);

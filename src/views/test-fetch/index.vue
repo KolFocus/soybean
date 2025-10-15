@@ -99,6 +99,15 @@ const columns: DataTableColumns<Student> = [
     key: 'age',
     width: 80,
     render: (row) => `${row.age}岁`
+  },
+  {
+    title: '创建时间',
+    key: 'create_time',
+    width: 180,
+    render: (row) => {
+      if (!row.create_time) return '-';
+      return new Date(row.create_time).toLocaleString('zh-CN');
+    }
   }
 ];
 
