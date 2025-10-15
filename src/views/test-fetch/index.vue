@@ -5,7 +5,7 @@
         <template #header-extra>
           <NButton type="primary" @click="handleRefresh">
             <template #icon>
-              <icon-ic-round-refresh class="text-icon" />
+              <Icon icon="ic:round-refresh" class="text-icon" />
             </template>
             刷新数据
           </NButton>
@@ -48,7 +48,7 @@
 <script setup lang="ts">
 import { ref, onMounted, h } from 'vue';
 import { NButton, NCard, NDataTable, NSpin, NAlert, NEmpty, type DataTableColumns } from 'naive-ui';
-import { IconIcRoundRefresh } from '@iconify/vue';
+import { Icon } from '@iconify/vue';
 import { getStudents, type Student } from '@/service/supabase';
 
 // 响应式数据
