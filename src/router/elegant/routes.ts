@@ -703,6 +703,15 @@ export const generatedRoutes: GeneratedRoute[] = [
     ]
   },
   {
+    name: 'test-fetch',
+    path: '/test-fetch',
+    component: 'layout.base$view.test-fetch',
+    meta: {
+      title: 'test-fetch',
+      i18nKey: 'route.test-fetch'
+    }
+  },
+  {
     name: 'user-center',
     path: '/user-center',
     component: 'layout.base$view.user-center',

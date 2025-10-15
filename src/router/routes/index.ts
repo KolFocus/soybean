@@ -200,6 +200,17 @@ const customRoutes: CustomRoute[] = [
         }
       }
     ]
+  },
+  {
+    name: 'test-fetch',
+    path: '/test-fetch',
+    component: 'layout.base$view.test-fetch',
+    meta: {
+      title: 'test-fetch',
+      i18nKey: 'route.test-fetch',
+      icon: 'carbon:data-table',
+      order: 11
+    }
   }
 ];
 
